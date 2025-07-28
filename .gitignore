@@ -1,0 +1,21 @@
+# Log files - ignore contents but keep directory structure
+logs/*
+!logs/.gitkeep
+
+# Claude settings and history
+.claude*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# macOS
+.DS_Store
+.DS_Store?
+
+# Temporary files
+*.tmp
+*.log
