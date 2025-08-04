@@ -36,7 +36,7 @@ class ConnectivityMonitor:
         self.log_dir = Path(log_dir)
         self.log_dir.mkdir(exist_ok=True)
         
-        self.json_log_file = self.log_dir / "connectivity_python.log"
+        # JSON logging removed - using CSV only
         self.csv_log_file = self.log_dir / "connectivity_summary.csv"
         self.debug_log_file = self.log_dir / "wifi_monitor_debug.log"
         
@@ -898,12 +898,8 @@ class ConnectivityMonitor:
         return summary
     
     def log_results(self, results: Dict) -> None:
-        """Log results to both JSON and CSV files."""
-        # Log to JSON file
-        with open(self.json_log_file, 'a', encoding='utf-8') as f:
-            f.write(json.dumps(results) + '\n')
-        
-        # Log to CSV file
+        """Log results to CSV file."""
+        # Log to CSV file only
         self._log_to_csv(results)
     
     def _log_to_csv(self, results: Dict) -> None:
