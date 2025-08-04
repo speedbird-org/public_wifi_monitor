@@ -60,3 +60,4 @@ python3 wifi_monitor.py --monitor --debug
 - `requirements.txt` - Python dependencies
 - `logs/` - Log files directory
 - `archive/` - Legacy implementations
+
