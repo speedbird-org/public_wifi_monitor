@@ -68,12 +68,14 @@ class ConnectivityMonitor:
         self.http_endpoints = [
             "http://www.google.com",
             "http://www.github.com",
-            "http://www.cloudflare.com"
+            "http://www.cloudflare.com",
+            "http://www.yuvilabs.com"
         ]
         self.https_endpoints = [
             "https://www.google.com",
             "https://www.github.com",
-            "https://www.cloudflare.com"
+            "https://www.cloudflare.com",
+            "https://www.yuvilabs.com"
         ]
         
         # Test configuration
