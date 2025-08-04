@@ -9,7 +9,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Define the cron job
-CRON_JOB="* 9-19 * * 1-5 cd $SCRIPT_DIR && python3 wifi_monitor.py --monitor >> logs/cron.log 2>&1"
+CRON_JOB="* 9-19 * * 1-5 cd $SCRIPT_DIR && { python3 wifi_monitor.py --monitor; git pull; } >> logs/cron.log 2>&1"
 
 # Check if Python 3 is available
 if ! command -v python3 &> /dev/null; then
